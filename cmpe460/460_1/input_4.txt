@@ -1,0 +1,10 @@
+number of spheres 3
+color of sphere 1 =(0,100,100);
+color of sphere 2=(0,255,0);
+color of sphere 3=(200,0,0)
+Position (x,y,z) of sphere 1: (-20,-50,600)
+Radius of sphere 1 = 20
+Position (x,y,z) of sphere 2: (30,0,700)
+Radius of sphere 2 = 40
+Position (x,y,z) of sphere 3: (90,-100,500)
+Radius of sphere 3 = 40

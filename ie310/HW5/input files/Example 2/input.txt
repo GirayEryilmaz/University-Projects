@@ -1,0 +1,15 @@
+Problem type (min or max)
+min
+
+f(x) coefficients (c1, c2, c3, c4)
+-2.112, 4.221, 21.24, -9.1
+
+Subject to (l, u)
+3.457, 121.96
+
+The acceptable maximum level of uncertainty (e)
+0.00001
+
+The method that will be employed
+(1. Bisection, 2. Golden Section)
+2

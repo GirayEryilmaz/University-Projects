@@ -1,0 +1,88 @@
+ie306
+
+how to run the code:
+in the bin folder (parent of hw1 folder) type
+>java java hw1.Sim <seed> <number_of_total_customers>
+
+System : Call Center
+Entities : Customer Queue and events where there are two types of events arrivals and departs
+Attributes of events :
+	type : arrival or departure
+	time : depanding on the type arrival time or departure time respectively
+	service time : how long the service takes (only depart events have meaningful variables)
+
+System state : Consists of
+	Clock : current time (A	variable	representing	simulated	time)
+	QueueLength : length of waiting queue
+	NumberInService : 0 if service is empty 1 service is full 
+	LastEventTime 	: time of last event
+	NumberOfDepartures : Number Of Departures
+	Custumers queue : list of customers arrived, not departed yet 
+	FutureEventList : 
+		
+	renegedCounter  : number of reneged people
+	totalServiceTime : total ServiceTime
+	totalWaitingTime : total WaitingTime
+	
+	Given constants:
+		MeanInterArrivalTime
+		MeanServiceTime 
+		SIGMA 
+		TotalCustomers
+Events : the events are also entities here
+
+Activities :
+	Service time
+	inter arrival time
+Delay : 
+	Waiting time in the queue
+	
+	
+Simulation Logic:
+	We worked on the code that is given by you.
+	There are basically two main events arrival and depature, start of service is not represented 
+	as main event but rather a primary event that is handled by scheduleDepature function.
+	Essentially events triger next events, the part we added is renege situation.
+	Our code works analogues to a cashiers perspective:
+	when the next one waiting in the queue is going to be schedule we may realize that that person is reneged 
+	so we take the other customer in the queue actually we loop until total number if customers many people either renege or 
+	depart naturally r we find some one waiting in the queue that we can schedule his departure. 
+	If we can find such a person (arrivel event) we schedule his arrival
+	if we can not and the simulation is not supposed to be over yet than we mark server as empty son that next arrival can
+	immidately can enter the service.
+
+Sample outputs:
+	1000 departs
+	Service utilization: 0.7051456867477716
+	Average Waiting Time: 3.4907424246181367
+	Number of Reneged Customers: 15
+	
+	5000 departs
+	Service utilization: 0.6900544074782113
+	Average Waiting Time: 3.0662223491088105
+	Number of Reneged Customers: 56
+	
+Our observations:
+we see that because of reneging, average waiting time and utilization reduces slightly
+which makes sense. Also average waiting time is close to service time mean.
+So we believe that our results are meaningfull.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

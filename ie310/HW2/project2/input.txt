@@ -1,0 +1,16 @@
+n (# of all variables; # of columns in matrix A):
+5
+
+m (# of constraints excluding the sign restrictions; # of rows in matrix A):
+2
+
+vector c transpose (objective function coefficients):
+6 14 13 0 0
+
+matrix A (technological coefficients):
+0.5 2 1 1 0
+1 	2 4 0 1
+
+vector b (right-hand side coefficients):
+24
+60

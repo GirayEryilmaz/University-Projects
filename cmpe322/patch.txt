@@ -1,0 +1,51 @@
+diff -r src/include/unistd.h "src (copy)/include/unistd.h"
+433c433
+< 
+---
+> int	printinteger(int);
+diff -r src/lib/libc/misc/Makefile.inc "src (copy)/lib/libc/misc/Makefile.inc"
+10c10
+< SRCS+=	stack_protector.c
+---
+> SRCS+=	stack_protector.c printinteger.c
+Only in src (copy)/lib/libc/misc: printinteger.c
+diff -r src/minix/include/minix/callnr.h "src (copy)/minix/include/minix/callnr.h"
+60a61
+> #define PRINTINTEGER		(PM_BASE + 48)
+62c63
+< #define NR_PM_CALLS		48	/* highest number from base plus one */
+---
+> #define NR_PM_CALLS		49	/* highest number from base plus one */
+diff -r src/minix/include/minix/config.h "src (copy)/minix/include/minix/config.h"
+6c6
+< #define OS_RELEASE "3.4.0"	/* 3.m.p */
+---
+> #define OS_RELEASE "4.0"	/* 3.m.p */
+diff -r src/minix/kernel/main.c "src (copy)/minix/kernel/main.c"
+167a168,171
+>   
+>   
+>   	printf("%d" , NR_BOOT_PROCS);
+>   	
+188a193,195
+> 	printf("\n");
+> 	printf(ip->proc_name);
+> 	
+348a356,357
+>   
+>   printf("This kernel is modified by Eryilmaz, Giray for the course CmpE322\n");
+Only in src (copy)/minix/servers/pm: do_printinteger.c
+diff -r src/minix/servers/pm/Makefile "src (copy)/minix/servers/pm/Makefile"
+7c7
+< 	profile.c mcontext.c schedule.c event.c
+---
+> 	profile.c mcontext.c schedule.c event.c do_printinteger.c
+diff -r src/minix/servers/pm/proto.h "src (copy)/minix/servers/pm/proto.h"
+53a54
+> int do_printinteger(void);
+diff -r src/minix/servers/pm/table.c "src (copy)/minix/servers/pm/table.c"
+61c61,62
+< 	CALL(PM_GETSYSINFO)	= do_getsysinfo		/* getsysinfo(2) */
+---
+> 	CALL(PM_GETSYSINFO)	= do_getsysinfo,		/* getsysinfo(2) */
+> 	CALL(PRINTINTEGER) = do_printinteger

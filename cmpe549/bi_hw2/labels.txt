@@ -1,0 +1,1 @@
+("Man", "Monkey", "Dog", "Horse", "Donkey", "Pig", "Rabbit")

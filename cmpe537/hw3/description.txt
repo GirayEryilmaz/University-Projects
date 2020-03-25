@@ -1,0 +1,53 @@
+In this assignment you are going to develop an image classifier based on Bag-of-Features model.
+
+You are given a dataset which contains variable number of instances per class (There are 7 classes: City, Face, Greenery, Building, House Indoor, Office, Sea). The dataset is also divided into two as training and test. You are going to train your classifier using the training image set and test it using the test image set.
+
+You will write your code using Python.
+
+Bag-of-Features Model
+
+In order to implement Bag-of-Features model, you are going to follow three steps explained below: 
+
+    Compute SIFT descriptors: You are going to compute 128-dimensional SIFT descriptors for each image. 
+
+You are going to use cv2.SIFT().detect function in the OPENCV library which is publicly available and easy to install in the python environment. (Note: sift was removed from the current opencv library. You can install the opencv-contrib module as follows to access the functions: pip3 install opencv-contrib-python==3.4.2.16)
+
+    Find the dictionary: To learn dictionary centers (codewords), perform k-means clustering on the SIFT descriptors which were computed from the training image set at the previous step. Perform k-means with different number of clusters (K =50,100 and 500), and compare the effects of cluster count on image classification task.
+
+You can use sklearn.cluster.KMeans function in the scikit-learn library.
+
+    Feature quantization: A different number of feature points will be extracted from each image, represented by 128 dimensional SIFT descriptor. Assign each descriptor to one of the classes, by selecting the nearest codeword. Then, build a histogram with K bins. Note that since each image yields different number of feature points, the histogram needs to be normalized.
+
+Classification
+
+You are going to use linear Support Vector Machines as classifier. You are supposed to use the SVM function in the scikit-learn library (python port of the commonly used libsvm tool). There is a good LIBSVM guide in their website, which contains lots of useful information on parameter selection and LIBSVM usage: Guide
+
+Also, you are going to use Chi-Squared kernel with your linear SVM classifier. Chi-Squared kernels are useful for handling discrete features such as bag-of-features. Since scikit-learns's python implementation does not provide the Chi-Squared kernel, you are going use a pre-computed Chi-Squared kernel with your classifier. You can find an example usage in (scikit-learn.org/stable/modules/metrics.html).
+
+Use 5 fold cross validation (using sklearns GridSearchCV function) to choose classifier parameters C and kernel  and include the results in your report.
+
+Reporting
+Report average training error, selected parameter C and performance on test set as a table for all configurations described in the assignment.
+
+Include a confusion matrix in your report and comment on it.
+
+Deliverables
+
+    Project report (.tex & pdf): Describe your methodology. Comment on your results.
+
+    Source code files (*.m)
+
+WARNING! Before submission read this assignment definition once more. Be sure that you don't miss anything required.
+
+WARNING! Submit all files as one compressed file and do not send the dataset. Please send files in correct format. Do not submit .doc files, submit only pdf for your reports.
+WARNING! ALL work submitted must be your own. Any instance of plagiarism will result in a negative grade. 
+
+Bonus
+Improving classification performance by any means will be awarded. 
+Bonus II
+Reports written in LaTeX will be rewarded additional points. In order to prove that you have written your report in LaTeX, attach the required *.tex files to your submission.
+Dataset
+
+Dataset files (~185 MB) are available for download, if you are inside campus, download will be faster:
+
+Download from BOUN

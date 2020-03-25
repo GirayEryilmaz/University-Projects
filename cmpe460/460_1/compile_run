@@ -1,0 +1,3 @@
+g++ -o rtp  -Wall ray_trace_project.cpp
+./rtp  $1 input.txt  #input.txt is he default parameter
+#eog ./output.ppm

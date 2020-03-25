@@ -1,0 +1,16 @@
+1.1 code comments
+My code reads the files one by one at each file travels through the array representations of the sound, when it notices a value lager than the threshold it increases the counter and to not to count the same clap twice or more it turns next values to 0 in the radius, than continues.
+At the end reports the counted value.
+the worst part is i can not be sure that the threshold that i gave is a good one. i did my best but it may fail for some clap.
+Also i assumed backround silence.
+
+1.2
+Code is quite straight forward. simply plays with the frequency either directly or by removing data or inserting 0's to the data 
+i learned that inserting gaps can be a way to reduce frequency and by taking out some data we can effectiely increase frequency 
+exercises 2 and 4 play the same sound because they both practically halve the frequency.
+
+1.3
+First code constructs matrix A and b (which in fact ,i believe, should be considered the hardest part because i had no idea how to do it at first, i wish you could explaine it more clearly raher than telling us to use linsolve) then uses linsolve to get results and plots the constructed graph part by part.
+
+my figure is somewhat similar to the actual figure. i would therotically expect it to be better than linear interpolation but in this case linear could have been better. At least this is how it looks to me. Yet without knowing the actual data, spline is the 
+"common sense" choice

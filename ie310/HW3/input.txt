@@ -1,0 +1,24 @@
+Problem Type (minimization or maximization):
+maximization
+
+n (# of all variables; # of columns in matrix A):
+8
+
+m (# of constraints excluding the sign restrictions; # of rows in matrix A):
+3
+
+vector c transpose (objective function coefficients) for Phase 1:
+0 0 0 0 0 0 -1 -1
+
+vector c transpose (objective function coefficients) for Phase 2:
+2 3 1 0 0 0 0 0
+
+matrix A (technological coefficients):
+1 1 1 1 0 0 0 0
+2 1 -1 0 -1 0 1 0
+0 -1 1 0 0 -1 0 1
+
+vector b (right-hand side coefficients):
+40
+10
+10

@@ -1,0 +1,10 @@
+number of spheres 2
+color of sphere 1: (R,G,B)=(255,0,0);
+color of sphere 2=(0,255,0);
+Position (x,y,z) of sphere 1: (-30,-30,300)
+Radius of sphere 1 = 20
+Position (x,y,z) of sphere 2: (70,70,300)
+Radius of sphere 2 = 60
+2
+500,500,500
+-500,50,500

@@ -9,7 +9,7 @@ Projects and homeworks I did at Boğaziçi University... The ones I could find..
 - [Project 5](/cmpe250) `C++`
 
 ### [CmpE300 - Analysis of Algorithms](/cmpe300)
-- [Parallelized Smoothing and Line Detecting](/cmpe300) `MPI / C++`
+- [Parallelized Smoothing and Line Detecting](/cmpe300) `MPI / C`
 
 ### [CmpE321 - Intro. to Database Systems](/cmpe321)
 - [Database System Emulator](/cmpe321/StorageManager) `Java`

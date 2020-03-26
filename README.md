@@ -1,5 +1,7 @@
 
 # Homeworks and projects from University
+
+### Please do open an issue for any questions and leave a star on your way out :rocket:
 Projects and homeworks I did at Boğaziçi University... The ones I could find...
 
 ### [CmpE250 - Data Structures and Algorithms](/cmpe250)
